@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vikmit-deployment
+spec:
+  selector:
+    matchLabels:
+      app: vikmit
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: vikmit
+    spec:
+      containers:
+      - name: vikmit
+        image: vikas091120/vikmit:latest
+        ports:
+        - containerPort: 8080

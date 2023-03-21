@@ -1,0 +1,229 @@
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ sudo docker build Dockerfile 
+[sudo] password for exoit: 
+[+] Building 0.0s (0/0)                                                                                                                         
+ERROR: unable to prepare context: path "Dockerfile" not found
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ #docker build -t vikas091120/my-nginx-image:latest .
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ docker build -t vikas091120/vikmit:latest .
+[+] Building 19.4s (11/11) FINISHED                                                                                                             
+ => [internal] load build definition from Dockerfile                                                                                       0.0s
+ => => transferring dockerfile: 170B                                                                                                       0.0s
+ => [internal] load .dockerignore                                                                                                          0.0s
+ => => transferring context: 2B                                                                                                            0.0s
+ => [internal] load metadata for docker.io/library/golang:1.17                                                                             3.2s
+ => [1/6] FROM docker.io/library/golang:1.17@sha256:87262e4a4c7db56158a80a18fefdc4fee5accc41b59cde821e691d05541bbb18                      14.3s
+ => => resolve docker.io/library/golang:1.17@sha256:87262e4a4c7db56158a80a18fefdc4fee5accc41b59cde821e691d05541bbb18                       0.0s
+ => => sha256:742df529b073e7d1e213702a6cca40c32f3f5068125988de249416ba0abee517 7.12kB / 7.12kB                                             0.0s
+ => => sha256:d836772a1c1f9c4b1f280fb2a98ace30a4c4c87370f89aa092b35dfd9556278a 55.00MB / 55.00MB                                           3.8s
+ => => sha256:d1989b6e74cfdda1591b9dd23be47c5caeb002b7a151379361ec0c3f0e6d0e52 10.88MB / 10.88MB                                           1.8s
+ => => sha256:87262e4a4c7db56158a80a18fefdc4fee5accc41b59cde821e691d05541bbb18 2.35kB / 2.35kB                                             0.0s
+ => => sha256:55636cf1983628109e569690596b85077f45aca810a77904e8afad48b49aa500 1.80kB / 1.80kB                                             0.0s
+ => => sha256:66a9e63c657ad881997f5165c0826be395bfc064415876b9fbaae74bcb5dc721 5.16MB / 5.16MB                                             5.3s
+ => => sha256:c28818711e1ed38df107014a20127b41491b224d7aed8aa7066b55552d9600d2 54.58MB / 54.58MB                                           5.7s
+ => => extracting sha256:d836772a1c1f9c4b1f280fb2a98ace30a4c4c87370f89aa092b35dfd9556278a                                                  1.2s
+ => => sha256:9d6246ba248cc80872dc2995f9080ef76305b540968dadb096b75f2e2146a38a 85.90MB / 85.90MB                                           9.5s
+ => => extracting sha256:66a9e63c657ad881997f5165c0826be395bfc064415876b9fbaae74bcb5dc721                                                  0.1s
+ => => sha256:21d43f0d73c2979514706af3d892f631b75d5c2d56aebfac0172e5a4e934b447 135.06MB / 135.06MB                                        11.0s
+ => => extracting sha256:d1989b6e74cfdda1591b9dd23be47c5caeb002b7a151379361ec0c3f0e6d0e52                                                  0.2s
+ => => sha256:d8a1c5873f408d3f5a8d8d73c6b9a3d77818bab0b26142a493909ea8c4d0c020 154B / 154B                                                 6.4s
+ => => extracting sha256:c28818711e1ed38df107014a20127b41491b224d7aed8aa7066b55552d9600d2                                                  1.2s
+ => => extracting sha256:9d6246ba248cc80872dc2995f9080ef76305b540968dadb096b75f2e2146a38a                                                  1.7s
+ => => extracting sha256:21d43f0d73c2979514706af3d892f631b75d5c2d56aebfac0172e5a4e934b447                                                  2.8s
+ => => extracting sha256:d8a1c5873f408d3f5a8d8d73c6b9a3d77818bab0b26142a493909ea8c4d0c020                                                  0.0s
+ => [internal] load build context                                                                                                          0.0s
+ => => transferring context: 26.82kB                                                                                                       0.0s
+ => [2/6] WORKDIR /app                                                                                                                     0.8s
+ => [3/6] COPY go.mod  ./                                                                                                                  0.0s
+ => [4/6] RUN go mod download                                                                                                              0.3s
+ => [5/6] COPY . .                                                                                                                         0.0s
+ => [6/6] RUN go build -o main .                                                                                                           0.7s
+ => exporting to image                                                                                                                     0.1s
+ => => exporting layers                                                                                                                    0.0s
+ => => writing image sha256:6640472ecbe92d02a39e23dd4b1909ad452ba5e72f6903835f6995c892cd75e1                                               0.0s
+ => => naming to docker.io/vikas091120/vikmit:latest                                                                                       0.0s
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ #docker push vikas091120/my-nginx-image:latest
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ docker push vikas091120/vikmit:latest
+The push refers to repository [docker.io/vikas091120/vikmit]
+d44a33e33d6d: Preparing 
+3e7a8e572d08: Preparing 
+980bafb7f79d: Preparing 
+148c141a6c8e: Preparing 
+8618d1d2540c: Preparing 
+32034b6b07c1: Waiting 
+1c17b8dc0c24: Waiting 
+2b09084b5ad5: Waiting 
+7372faf8e603: Waiting 
+9be7f4e74e71: Waiting 
+36cd374265f4: Waiting 
+5bdeef4a08f3: Waiting 
+denied: requested access to the resource is denied
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ sudo docker push vikas091120/vikmit:latest
+[sudo] password for exoit: 
+The push refers to repository [docker.io/vikas091120/vikmit]
+d44a33e33d6d: Preparing 
+3e7a8e572d08: Preparing 
+980bafb7f79d: Preparing 
+148c141a6c8e: Preparing 
+8618d1d2540c: Preparing 
+32034b6b07c1: Waiting 
+1c17b8dc0c24: Waiting 
+2b09084b5ad5: Waiting 
+7372faf8e603: Waiting 
+9be7f4e74e71: Waiting 
+36cd374265f4: Waiting 
+5bdeef4a08f3: Waiting 
+denied: requested access to the resource is denied
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ docker login
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username: vikas091120
+Password: 
+WARNING! Your password will be stored unencrypted in /home/exoit/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ docker push vikas091120/vikmit:latest
+The push refers to repository [docker.io/vikas091120/vikmit]
+d44a33e33d6d: Pushed 
+3e7a8e572d08: Pushed 
+980bafb7f79d: Pushed 
+148c141a6c8e: Pushed 
+8618d1d2540c: Pushed 
+32034b6b07c1: Mounted from library/golang 
+1c17b8dc0c24: Mounted from library/golang 
+2b09084b5ad5: Mounted from library/golang 
+7372faf8e603: Mounted from library/golang 
+9be7f4e74e71: Mounted from library/golang 
+36cd374265f4: Mounted from library/golang 
+5bdeef4a08f3: Mounted from library/golang 
+latest: digest: sha256:2064e642f7ec1032ee3d5f41fe818040e5f395b0c4823f45024d0dd09be2d891 size: 2835
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl apply -f deployment.yaml
+deployment.apps/vikmit-deployment created
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl apply -f service.yaml
+service/vikmit-service created
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ minikube service vikmit-service --url
+http://192.168.67.2:31054
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl get pod
+NAME                                 READY   STATUS    RESTARTS   AGE
+vikmit-deployment-6bf9d9896c-jb6xs   1/1     Running   0          3m12s
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl get service
+NAME             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+kubernetes       ClusterIP   10.96.0.1       <none>        443/TCP        80m
+vikmit-service   NodePort    10.106.21.179   <none>        80:31054/TCP   3m27s
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl get nodes -o wide
+NAME       STATUS   ROLES           AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
+minikube   Ready    control-plane   82m   v1.26.1   192.168.67.2   <none>        Ubuntu 20.04.5 LTS   5.15.0-67-generic   docker://20.10.23
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl get deployment
+NAME                READY   UP-TO-DATE   AVAILABLE   AGE
+vikmit-deployment   1/1     1            1           9m7s
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ docker log
+docker: 'log' is not a docker command.
+See 'docker --help'
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ docker log 
+deployment.yaml  Dockerfile       .git/            .gitignore       go.mod           main.go          service.yaml     
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ docker log 
+deployment.yaml  Dockerfile       .git/            .gitignore       go.mod           main.go          service.yaml     
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ docker log 
+deployment.yaml  Dockerfile       .git/            .gitignore       go.mod           main.go          service.yaml     
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ docker ps
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED             STATUS             PORTS                                                                                                                                  NAMES
+87f795b6c3b2   gcr.io/k8s-minikube/kicbase:v0.0.37   "/usr/local/bin/entr…"   About an hour ago   Up About an hour   127.0.0.1:49177->22/tcp, 127.0.0.1:49176->2376/tcp, 127.0.0.1:49175->5000/tcp, 127.0.0.1:49174->8443/tcp, 127.0.0.1:49173->32443/tcp   minikube
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl log vikmit-deployment-6bf9d9896c-jb6xs
+error: unknown command "log" for "kubectl"
+
+Did you mean this?
+        top
+        logs
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl logs vikmit-deployment-6bf9d9896c-jb6xs
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl logs vikmit-deployment-6bf9d9896c-jb6xs
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl logs vikmit-deployment-6bf9d9896c-jb6xs
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl logs vikmit-deployment-6bf9d9896c-jb6xs
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+
+
+
+
+
+
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+
+
+
+
+
+
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ 
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl show namespaces
+error: unknown command "show" for "kubectl"
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl get namespaces
+NAME                   STATUS   AGE
+default                Active   85m
+kube-node-lease        Active   85m
+kube-public            Active   85m
+kube-system            Active   85m
+kubernetes-dashboard   Active   81m
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl get pods
+NAME                                 READY   STATUS    RESTARTS   AGE
+vikmit-deployment-6bf9d9896c-jb6xs   1/1     Running   0          11m
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl exec -it 
+deployment.yaml  Dockerfile       .git/            .gitignore       go.mod           main.go          service.yaml     
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl exec -it vikmit-deployment-6bf9d9896c-jb6xs
+error: you must specify at least one command for the container
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl exec -it vikmit-deployment-6bf9d9896c-jb6xs sh
+kubectl exec [POD] [COMMAND] is DEPRECATED and will be removed in a future version. Use kubectl exec [POD] -- [COMMAND] instead.
+# ls
+Dockerfile  go.mod  main  main.go
+# curl localhost:8080
+Hello, world!# ls  
+Dockerfile  go.mod  main  main.go
+# ^C
+# 
+command terminated with exit code 130
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl kill 
+error: unknown command "kill" for "kubectl"
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl delete pod vikmit-deployment-6bf9d9896c-jb6xs
+pod "vikmit-deployment-6bf9d9896c-jb6xs" deleted
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl get pods
+NAME                                 READY   STATUS    RESTARTS   AGE
+vikmit-deployment-6bf9d9896c-qp8zt   1/1     Running   0          8s
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl get pods
+NAME                                 READY   STATUS    RESTARTS   AGE
+vikmit-deployment-6bf9d9896c-qp8zt   1/1     Running   0          19s
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl get pods
+NAME                                 READY   STATUS    RESTARTS   AGE
+vikmit-deployment-6bf9d9896c-qp8zt   1/1     Running   0          22s
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl get pods --force
+error: unknown flag: --force
+See 'kubectl get --help' for usage.
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl delete pod vikmit-deployment-6bf9d9896c-jb6xs --force
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+Error from server (NotFound): pods "vikmit-deployment-6bf9d9896c-jb6xs" not found
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl delete pod vikmit-deployment-6bf9d9896c-jb6xs 
+Error from server (NotFound): pods "vikmit-deployment-6bf9d9896c-jb6xs" not found
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl get pods --force
+error: unknown flag: --force
+See 'kubectl get --help' for usage.
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl get pods 
+NAME                                 READY   STATUS    RESTARTS   AGE
+vikmit-deployment-6bf9d9896c-qp8zt   1/1     Running   0          72s
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl delete pod vikmit-deployment-6bf9d9896c-qp8zt --force
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+pod "vikmit-deployment-6bf9d9896c-qp8zt" force deleted
+exoit@exoit-ThinkPad-L14-Gen-3:~/exotel/testing1$ kubectl get pods 
+NAME                                 READY   STATUS              RESTARTS   AGE
+vikmit-deployment-6bf9d9896c-9gb6h   0/1     ContainerCreating   0          3s
